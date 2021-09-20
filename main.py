@@ -61,7 +61,7 @@ class Buttons:
             thread.append(threading.Timer(1.0, logic)) # adds new thread in thread list
             
 
-# changes phases 
+
 def changePhase():
     """
     changes phases of timer and updates currentTime to new time
@@ -85,7 +85,7 @@ def changePhase():
         color = False
 
 
-# test
+
 def logic():
     """
     1. creates initial thread list that tracks the time
