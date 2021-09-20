@@ -9,4 +9,6 @@ Intervals:
 3. 25 min work
 4. 5 min break
 5. 25 min work
-6. long break 30 min
+6. 5 min break
+7. 25min work
+8. long break 30 min
