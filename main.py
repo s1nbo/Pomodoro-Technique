@@ -88,21 +88,21 @@ def changePhase():
 
 def logic():
     """
-    1. creates initial thread list that tracks the time
-    2. updates current time, minutes, seconds and calls the changePhase() function
-    3. chnages timer color
-    4. calls itself every second in order to update the time (recursive)
+    0. creates initial thread list that tracks the time
+    1. updates current time, minutes, seconds and calls the changePhase() function
+    2. chnages timer color
+    3. calls itself every second in order to update the time (recursive)
     """
     global currentTime
     global thread
     global minutes 
     global seconds
 
-    # 1.
+    # 0.
     thread = [threading.Timer(1.0, logic)]
     
 
-    # 2. 
+    # 1. 
     minutes = currentTime // 60
     seconds = currentTime % 60
 
@@ -112,14 +112,14 @@ def logic():
     currentTime -= 1
 
 
-    # 3. 
+    # 2. 
     if color:
         timer.configure(text=(minutes, ':', seconds), fg='blue')
     elif not(color):
         timer.configure(text=(minutes, ':', seconds), fg=GREEN)
 
 
-    # 4.
+    # 3.
     if state == 'STOP':
 
         thread.append(threading.Timer(1.0, logic))
@@ -133,12 +133,12 @@ def logic():
 
 if __name__ == '__main__':
     """
-    1. creates tkmacosx window
-    2. places button and timer
-    3. calls logic function
+    0. creates tkmacosx window
+    1. places button and timer
+    2. calls logic function
     """
 
-    # 1.
+    # 0.
     root = tk.Tk()
 
     root.title('Pomodoro')
@@ -151,7 +151,7 @@ if __name__ == '__main__':
     tk.Grid.columnconfigure(root, 0, weight=1)
 
 
-    # 2.
+    # 1.
     b0 = Buttons(0, 1)
     b0.placeButton()
     
@@ -159,7 +159,7 @@ if __name__ == '__main__':
     timer.grid(column = 0, row = 0)
     
 
-    # 3.
+    # 2.
     logic()
 
     root.mainloop()
