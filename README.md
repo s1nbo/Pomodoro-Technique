@@ -1,7 +1,7 @@
 # Pomodoro Technique
  
 This simple piece of code displays a pomodoro timer.
-Wikipedia for explanaition: https://en.wikipedia.org/wiki/Pomodoro_Technique
+Wikipedia for explanation: https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 Intervals:
 1. 25 min work
