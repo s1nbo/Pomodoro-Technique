@@ -4,11 +4,11 @@ This simple piece of code displays a pomodoro timer.
 Wikipedia for explanation: https://en.wikipedia.org/wiki/Pomodoro_Technique
 
 Intervals:
-1. 25 min work
-2. 5 min break
-3. 25 min work
-4. 5 min break
-5. 25 min work
-6. 5 min break
-7. 25min work
-8. long break 30 min
+0. 25 min work
+1. 5 min break
+2. 25 min work
+3. 5 min break
+4. 25 min work
+5. 5 min break
+6. 25min work
+7. long break 30 min
