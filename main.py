@@ -76,6 +76,7 @@ def changePhase():
 
     if phase%2 == 0:
         currentTime = workTime
+        color = True
     elif phase == 7:
         currentTime = longPauseTime
         color = False
