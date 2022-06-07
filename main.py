@@ -91,7 +91,7 @@ def logic():
     """
     0. creates initial thread list that tracks the time
     1. updates current time, minutes, seconds and calls the changePhase() function
-    2. chnages timer color
+    2. changes timer color
     3. calls itself every second in order to update the time (recursive)
     """
     global currentTime
@@ -116,7 +116,7 @@ def logic():
     # 2. 
     if color:
         timer.configure(text=(minutes, ':', seconds), fg='blue')
-    elif not(color):
+    else:
         timer.configure(text=(minutes, ':', seconds), fg=GREEN)
 
 
