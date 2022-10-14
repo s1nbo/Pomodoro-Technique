@@ -33,7 +33,7 @@ class Buttons:
         """ 
         button = Button(root, text=state, height=5, width=10, bg='black', fg=GREEN, activeforeground=GREEN, borderless=1, activebackground='black', focuscolor=GREEN, command=lambda: self.changeButton(button) )
         button.grid(column=self.x, row=self.y, sticky='NSWE')
-
+        button.configure(font=('Helvetica', 50, 'bold'))
 
     
     def changeButton(self, button):
@@ -47,7 +47,8 @@ class Buttons:
         if state == 'START':
             state = 'STOP'
 
-            button.configure(height=5, width=10, fg='red', activebackground='black', activeforeground='red', focuscolor='red', text=state ) # change to red stop state
+            button.configure(height=5, width=10, fg='red', activebackground='black', disabledforeground='black', activeforeground='red', disabledbackground='black', focuscolor='red', text=state) # change to red stop state
+            #increase text size
 
             thread.append(threading.Timer(1.0, logic)) # adds new thread too thread list
             thread[len(thread)-1].start() # runs thread in thread list
@@ -55,7 +56,7 @@ class Buttons:
         elif state == 'STOP':
             state = 'START'
 
-            button.configure(height=5, width=10, fg=GREEN, activebackground='black', activeforeground=GREEN, focuscolor=GREEN, text=state) # change to green start state  
+            button.configure(height=5, width=10, fg=GREEN, activebackground='black', disabledforeground='black', activeforeground=GREEN, disabledbackground='black', focuscolor=GREEN, text=state) # change to green start state  
             
             thread[len(thread)-1].cancel() # cancels thread in thread list
             thread.append(threading.Timer(1.0, logic)) # adds new thread in thread list
